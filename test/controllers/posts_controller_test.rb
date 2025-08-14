@@ -15,7 +15,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     get posts_url, as: :json
     assert_equal Post.order(created_at: :desc), assigns(:posts)
   end
-  # 
+  #
 
   test "should create post" do
     assert_difference("Post.count") do
